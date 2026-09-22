@@ -199,7 +199,11 @@ def merge_podcast(list1, list2):
 
 def insert_podcast():
     #list1 = get_mileage()
-    try: list1 = get_mileage() except Exception as e: print(f"获取小宇宙收听里程失败，跳过：{e}") list1 = []
+    try:
+        list1 = get_mileage()
+    except Exception as e:
+        print(f"获取小宇宙收听里程失败，跳过：{e}")
+        list1 = []  
     list2 = get_podcast()
     results = merge_podcast(list1, list2)
     dict = {}
